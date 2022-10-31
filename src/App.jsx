@@ -1,8 +1,8 @@
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Header } from 'components/Header';
 import { Home } from 'pages/Home';
 import { Movies } from 'pages/Movies';
-import { useState } from 'react';
+import NotFound from 'pages/NotFound/NotFound';
 
 export const App = () => {
   return (
@@ -11,7 +11,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
   );
