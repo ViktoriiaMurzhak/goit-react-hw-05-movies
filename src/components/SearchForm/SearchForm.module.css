@@ -1,0 +1,52 @@
+.form {
+  padding: 15px 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.add {
+  margin-bottom: 15px;
+  color: rgb(220, 231, 255);
+  background: #283657;
+  border: none;
+  width: 150px;
+  height: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition-property: background-color color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.add:hover {
+  background-color: #667db3;
+  color: rgb(255, 89, 0);
+}
+
+.full {
+  margin-top: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 25px;
+  background: transparent;
+  outline: none;
+  border: 1px solid rgb(220, 231, 255);
+  font-size: 18px;
+  color: rgb(220, 231, 255);
+  padding-left: 10px;
+}
+
+.full::placeholder {
+  color: rgba(255, 89, 0, 0.5);
+}
+
+.label {
+  color: rgb(220, 231, 255);
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}

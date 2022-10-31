@@ -1,0 +1,18 @@
+.Header {
+  background-color: rgba(55, 59, 68, 0.4);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavList {
+  display: flex;
+  gap: 20px;
+}
+
+.NavLinkA {
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+}

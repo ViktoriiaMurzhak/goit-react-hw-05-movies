@@ -1,0 +1,22 @@
+.Button {
+  margin: 10px auto 20px auto;
+  color: rgb(220, 231, 255);
+  background: #283657;
+  border: none;
+  width: 150px;
+  height: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+
+  transition-property: background-color color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Button:hover,
+.Button:focus {
+  background-color: #667db3;
+  color: rgb(255, 89, 0);
+}
