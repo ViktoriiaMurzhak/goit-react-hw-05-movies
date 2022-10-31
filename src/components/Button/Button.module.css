@@ -1,14 +1,15 @@
 .Button {
-  margin: 10px auto 20px auto;
+  display: block;
+  margin: 0 auto 15px auto;
   color: rgb(220, 231, 255);
   background: #283657;
   border: none;
-  width: 150px;
-  height: 30px;
+  width: 200px;
+  height: 40px;
   text-transform: uppercase;
   cursor: pointer;
-  text-align: center;
-  display: block;
+
+  font-size: 16px;
 
   transition-property: background-color color;
   transition-duration: 300ms;

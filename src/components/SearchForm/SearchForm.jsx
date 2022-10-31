@@ -15,17 +15,18 @@ export const SearchForm = ({ onSubmit }) => {
   };
   return (
     <form className={css.form} onSubmit={hanleSubmit}>
-      <label className={css.label}>
+      <label className={css.Label} htmlFor="search">
         Find movie by name
-        <input
-          className={css.full}
-          type="text"
-          name="filter"
-          value={query}
-          onChange={handleChange}
-          placeholder="Search movie"
-        />
       </label>
+      <input
+        className={css.full}
+        type="text"
+        name="search"
+        value={query}
+        onChange={handleChange}
+        placeholder="Search movie..."
+        autoComplete="off"
+      />
       <button className={css.add} type="submit">
         Search
       </button>
