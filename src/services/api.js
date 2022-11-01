@@ -40,6 +40,19 @@ export async function getMovieCast(id) {
       language: 'en-US',
     },
   });
-  console.log('data', data.cast);
   return data.cast;
+}
+
+export async function getMovieReviews(id) {
+  const { data } = await axios.get(
+    `/movie/${id}/reviews
+`,
+    {
+      params: {
+        api_key: API_KEY,
+        language: 'en-US',
+      },
+    }
+  );
+  return data.results;
 }

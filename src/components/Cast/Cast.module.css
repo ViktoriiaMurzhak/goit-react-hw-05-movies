@@ -9,6 +9,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+  margin-bottom: 40px;
 }
 
 .Name {
@@ -27,4 +28,13 @@
   text-align: center;
   font-weight: 300;
   margin-top: 6px;
+}
+
+.Error {
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

@@ -20,7 +20,7 @@ export const MovieDetails = () => {
   const [film, setFilm] = useState([]);
 
   const params = useParams();
-  const id = params.movieId;
+  const id = params?.movieId;
 
   useEffect(() => {
     async function getData() {
@@ -65,19 +65,25 @@ export const MovieDetails = () => {
           <p className={css.Text}>{film.release_date}</p>
 
           <h3 className={css.Title}>Rating</h3>
-          <p className={css.Text}>{Math.floor(film?.vote_average * 1)}</p>
+          <p className={css.Text}>{film.vote_average}</p>
 
           <h3 className={css.Title}>Genres</h3>
           <ul className={css.list}>
-            {film?.genres?.map(item => (
-              <li key={item.name}>
-                <p className={css.Text}>{item.name}</p>
-              </li>
-            ))}
+            {film.genres !== null ? (
+              film?.genres?.map(item => (
+                <li key={item.name}>
+                  <p className={css.Text}>{item.name}</p>
+                </li>
+              ))
+            ) : (
+              <p className={css.Text}>No data available</p>
+            )}
           </ul>
 
           <h3 className={css.Title}>Overview</h3>
-          <p className={css.Text}>{film.overview}</p>
+          <p className={css.Text}>
+            {film.overview ? film.overview : 'No data available'}
+          </p>
         </div>
       </div>
       <div>
