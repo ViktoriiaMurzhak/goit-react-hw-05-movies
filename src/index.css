@@ -18,10 +18,6 @@ a {
   text-decoration: none;
 }
 
-a.active {
-  color: rgb(255, 89, 0);
-}
-
 p,
 h1,
 h2,

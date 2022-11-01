@@ -1,0 +1,30 @@
+.Photo {
+  width: 160px;
+  display: block;
+}
+
+.PhotoList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.Name {
+  max-width: 160px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+.Role {
+  max-width: 160px;
+  color: rgb(255, 89, 0);
+  font-size: 14px;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 6px;
+}

@@ -16,3 +16,9 @@
   color: #fff;
   text-transform: uppercase;
 }
+
+.active {
+  font-size: 22px;
+  color: rgb(255, 89, 0);
+  text-transform: uppercase;
+}

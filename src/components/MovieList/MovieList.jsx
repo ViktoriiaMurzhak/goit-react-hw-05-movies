@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Loader } from '../Loader';
 import { getHomeMovies } from 'services/api';
 import css from './MovieList.module.css';
+import { useLocation } from 'react-router-dom';
 
 const pageStatus = {
   INIT: 'init',
@@ -14,6 +15,8 @@ const pageStatus = {
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [status, setStatus] = useState(pageStatus.INIT);
+
+  const location = useLocation();
 
   useEffect(() => {
     setStatus(pageStatus.LOADING);
@@ -44,9 +47,11 @@ export const MovieList = () => {
           {movies?.map(item => {
             return (
               <MovieItem
+                location={location}
                 key={item.original_title}
                 title={item.original_title}
                 url={item.poster_path}
+                activeId={item.id}
               />
             );
           })}

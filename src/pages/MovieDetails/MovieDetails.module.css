@@ -1,0 +1,99 @@
+.add {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  color: rgb(220, 231, 255);
+  background: #283657;
+  border: none;
+  width: 100px;
+  height: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+
+  transition-property: background-color color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.add:hover {
+  background-color: #667db3;
+  color: rgb(255, 89, 0);
+}
+
+.InfoBox {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ImgBox {
+  margin-top: 20px;
+  padding: 5px 20px 5px 5px;
+}
+
+.Img {
+  min-width: 240px;
+  max-width: 250px;
+
+  display: block;
+  padding: 5px;
+  border: thick double rgba(255, 89, 0, 0.2);
+
+  /* box-shadow: 6px 8px 5px 0px rgba(255, 255, 255, 0.3); */
+}
+
+.InfoText {
+  width: 100%;
+}
+
+.Name {
+  padding: 20px 0 0 0;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-bottom: 1px solid rgb(255, 89, 0);
+}
+
+.Title {
+  color: rgb(255, 89, 0);
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.Text {
+  color: #fff;
+}
+
+.list {
+  display: flex;
+  gap: 15px;
+}
+
+.linkList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  margin-top: 20px;
+  border-top: 1px solid rgb(255, 89, 0);
+}
+
+.NavLinkA {
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.active {
+  font-size: 22px;
+  color: rgb(255, 89, 0);
+  text-transform: uppercase;
+}

@@ -19,6 +19,27 @@ export async function getMovieByName(query, page) {
       query,
     },
   });
-  console.log('data.results', data);
+  return data.results;
+}
+
+export async function getMovieDetalis(id) {
+  const { data } = await axios.get(`/movie/${id}`, {
+    params: {
+      api_key: API_KEY,
+      language: 'en-US',
+    },
+  });
+
   return data;
+}
+
+export async function getMovieCast(id) {
+  const { data } = await axios.get(`/movie/${id}/credits`, {
+    params: {
+      api_key: API_KEY,
+      language: 'en-US',
+    },
+  });
+  console.log('data', data.cast);
+  return data.cast;
 }
