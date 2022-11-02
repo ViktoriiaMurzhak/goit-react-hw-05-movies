@@ -3,6 +3,7 @@ import { MovieItem } from 'components/MovieItem';
 import { Error } from 'helpers/Error';
 import { useLocation } from 'react-router-dom';
 import css from './SearchMovie.module.css';
+import PropTypes from 'prop-types';
 
 const Status = {
   INIT: 'init',
@@ -13,6 +14,10 @@ const Status = {
 
 export const SearchMovie = ({ value, status, movies }) => {
   const location = useLocation();
+  console.log('value', typeof value);
+  console.log('status', typeof status);
+  console.log('movies', typeof movies);
+
   return (
     <>
       {status === Status.SUCCESS && movies.length > 0 && (
@@ -38,4 +43,10 @@ export const SearchMovie = ({ value, status, movies }) => {
       {/* {movies.length >= 12 && <Button onClick={handleChangePage} />} */}
     </>
   );
+};
+
+SearchMovie.propTypes = {
+  value: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  movies: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };

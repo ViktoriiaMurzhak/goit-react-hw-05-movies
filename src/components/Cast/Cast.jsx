@@ -38,8 +38,12 @@ export const Cast = () => {
     <>
       {status === pageStatus.LOADING && <Loader />}
 
-      {(status === pageStatus.ERROR || cast.length === 0) && (
+      {status === pageStatus.ERROR && (
         <p className={css.Error}>ERROOOOOOR, CAST NOT FOUND</p>
+      )}
+
+      {status === pageStatus.SUCCESS && cast.length === 0 && (
+        <p className={css.Error}>CAST NOT FOUND</p>
       )}
 
       {status === pageStatus.SUCCESS && (

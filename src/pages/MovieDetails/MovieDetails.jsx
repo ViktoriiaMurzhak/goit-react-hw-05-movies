@@ -1,5 +1,5 @@
 import { Box } from 'helpers/Box/Box';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import {
   Link,
   NavLink,
@@ -62,21 +62,23 @@ export const MovieDetails = () => {
           <h2 className={css.Name}>{film.original_title}</h2>
 
           <h3 className={css.Title}>Release date</h3>
-          <p className={css.Text}>{film.release_date}</p>
+          <p className={css.Text}>
+            {film.release_date ? film.release_date : 'No data available'}
+          </p>
 
           <h3 className={css.Title}>Rating</h3>
           <p className={css.Text}>{film.vote_average}</p>
 
           <h3 className={css.Title}>Genres</h3>
           <ul className={css.list}>
-            {film.genres !== null ? (
+            {film?.genres?.length === 0 ? (
+              <p className={css.Text}>No data available</p>
+            ) : (
               film?.genres?.map(item => (
                 <li key={item.name}>
                   <p className={css.Text}>{item.name}</p>
                 </li>
               ))
-            ) : (
-              <p className={css.Text}>No data available</p>
             )}
           </ul>
 
@@ -108,7 +110,9 @@ export const MovieDetails = () => {
           </li>
         </ul>
       </div>
-      <Outlet />
+      <Suspense>
+        <Outlet />
+      </Suspense>
     </Box>
   );
 };

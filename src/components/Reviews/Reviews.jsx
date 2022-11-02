@@ -46,10 +46,18 @@ export const Reviews = () => {
 
   return (
     <>
-      {status === pageStatus.LOADING && <Loader />}
-      {(status === pageStatus.ERROR || reviews.length === 0) && (
+      {status === pageStatus.ERROR && (
         <p className={css.Error}>ERROOOOOOR, REVIEWS NOT FOUND</p>
       )}
+
+      {(status === pageStatus.LOADING || status === pageStatus.INIT) && (
+        <Loader />
+      )}
+
+      {status === pageStatus.SUCCESS && reviews.length === 0 && (
+        <p className={css.Error}>REVIEWS NOT FOUND</p>
+      )}
+
       {status === pageStatus.SUCCESS && (
         <ul className={css.List}>
           {reviews?.map(item => (

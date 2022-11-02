@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import css from './SearchForm.module.css';
+import PropTypes from 'prop-types';
 
 export const SearchForm = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
@@ -34,17 +35,6 @@ export const SearchForm = ({ onSubmit }) => {
   );
 };
 
-// export const SearchForm = ({ filter, handleFilter }) => {
-//   return (
-//     <label className={css.label}>
-//       Find contacts by name
-//       <input
-//         className={css.full}
-//         type="text"
-//         name="filter"
-//         value={filter}
-//         onChange={handleFilter}
-//       />
-//     </label>
-//   );
-// };
+SearchForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
