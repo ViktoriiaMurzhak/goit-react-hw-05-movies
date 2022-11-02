@@ -50,7 +50,7 @@ export const MovieDetails = () => {
           <img
             className={css.Img}
             src={
-              film.poster_path
+              film?.poster_path
                 ? `https://image.tmdb.org/t/p/w200${film.poster_path}`
                 : defaultImg
             }
