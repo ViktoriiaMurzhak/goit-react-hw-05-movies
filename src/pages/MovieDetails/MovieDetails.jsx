@@ -39,7 +39,7 @@ export const MovieDetails = () => {
     <Box>
       <Link
         to={
-          location?.state?.from.pathname + location?.state?.from.search ?? '/'
+          location?.state?.from?.pathname + location?.state?.from?.search ?? '/'
         }
         className={css.add}
       >
